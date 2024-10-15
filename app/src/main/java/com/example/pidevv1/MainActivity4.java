@@ -1,6 +1,9 @@
 package com.example.pidevv1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,17 @@ public class MainActivity4 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Gestion de l'image back pour revenir à la page mtaa login
+        ImageView backButton = findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Démarrage de pagelogin
+                Intent intent = new Intent(MainActivity4.this, MainActivity3.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
