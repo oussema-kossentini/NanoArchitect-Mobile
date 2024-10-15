@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="submit">Supprimer</string>
+    <string name="contract_header">Supprimer le contrat</string>
+    <string name="cin_hint">cin</string>
+    <string name="contract_number_hint">N° contrat</string>
+    <string name="contract_type_hint">branche</string>
+
+</resources>

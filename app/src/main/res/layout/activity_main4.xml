@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Supprimer un contrat"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
+
+    <!-- CIN Field -->
+    <TextView
+        android:id="@+id/cinLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votre numéro de CIN:"
+        android:textSize="18sp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/cinEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cinLabel"
+        android:hint="cin"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Contract Number Field -->
+    <TextView
+        android:id="@+id/contractNumberLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votre numéro de contrat:"
+        android:textSize="18sp"
+        android:layout_below="@id/cinEditText"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/contractNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="N° contrat"
+        android:layout_below="@id/contractNumberLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Contract Type Field -->
+    <TextView
+        android:id="@+id/contractTypeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type de contrat:"
+        android:textSize="18sp"
+        android:layout_below="@id/contractNumberEditText"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/contractTypeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="branche"
+        android:layout_below="@id/contractTypeLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Submission Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Supprimer"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/contractTypeEditText"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
