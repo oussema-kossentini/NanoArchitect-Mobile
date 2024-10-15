@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name">Electrigo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="Tesla">Tesla</string>
+    <string name="title2">Porche</string>
+    <string name="title3">Audi</string>
+    <string name="title4">Ford</string>
+    <string name="title5">Fiat</string>
+    <string name="pay">Pay</string>
+    <string name="transaction_amount">Transaction Amount in USD</string>
+    <string name="pay_with_credit_card">Pay with Credit Card</string>
+
+    <string name="Marque">Marque</string>
+    <string name="prix">prix</string>
+    <string name="modele">modele</string>
+    <string name="description">description</string>
+    <string name="vitessemax">Vitesse Maximale</string>
+    <string name="capaciteBatterie">capaciteBatterie</string>
+    <string name="nombreDePlaces">nombreDePlaces</string>
+    <string name="boite">Boite de vitesse</string>
+    <string name="image">image</string>
+    <string name="imagecartegrise">imagecartegrise</string>
+
+    <string name="voirplus">Voir plus</string>
+    <string name="title_activity_details_vehicule">DetailsVehiculeActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="google_map_api_key">AIzaSyAsTWalr9t6t7NFtlK-BrkCO4hcgQtbb-c</string>
+
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="signup_text">
+    <u> Créer un compte</u>>
+</string>
+    <string name="title_activity_login">Connectez vous</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="txt_otp_validation">Enter le code que vous avez recues </string>
+
+    <!--  Inputs | Labels | Buttons -->
+    <string name="input_suffix_Email">\@esprit.tn</string>
+    <string name="input_email">Email</string>
+    <string name="input_email_or_phone">Email/Phone</string>
+    <string name="input_full_name">Nom</string>
+    <string name="input_password">Mot_passe</string>
+    <string name="beforename">Prenom</string>
+
+    <string name="input_confirm_password">Confirme Mot_passe</string>
+
+    <string name="txt_or">OR</string>
+    <string name="txt_forgot_password">Forgot Password</string>
+    <string name="txt_reset_password">Reset Password</string>
+    <string name="txt_no_reception">vous avez pas recue le code ?</string>
+    <string name="txt_forgot_password_desc">Please enter your registered email to reset your password</string>
+    <string name="txt_reset_password_desc">Please enter your new password and confirm it.</string>
+    <string name="txtGames">Games</string>
+    <string name="txtMaterials">Materials</string>
+
+    <string name="txt_category">Category</string>
+    <string-array name="category">
+        <item>PS5 Games</item>
+        <item>PS4 Games</item>
+        <item>PS3 Games</item>
+        <item>Xbox Games</item>
+        <item>PC Games</item>
+    </string-array>
+
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Submit</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_verify">Verify</string>
+    <string name="btn_sendSMS">Send SMS</string>
+    <string name="btn_register_now">Don\'t have an account? <u>Register Now</u> </string>
+    <string name="btn_resend_code"><u>Resend code</u></string>
+    <string name="btn_terms_and_privacy">By registering you agree to our <u>Terms &amp; Conditions</u> and <u>Privacy Policy</u></string>
+    <string name="btn_forgot_password">Forgot password ?</string>
+    <string name="btn_remember_me">Remember Me</string>
+
+    <string name="action_1">Show More</string>
+
+
+    <!--  Menu | Fragments | Navigation -->
+    <string name="item_home">Home</string>
+    <string name="item_news">News</string>
+    <string name="item_store">Store</string>
+    <string name="item_profile">Profile</string>
+    <string name="item_notification">Notification</string>
+    <string name="item_favourite">Favourite</string>
+
+    <!--  ErrorsMessages  -->
+    <string name="msg_must_not_be_empty">Must not be empty!</string>
+    <string name="msg_check_your_email">Must be a valid email!</string>
+    <string name="msg_check_your_characters">Must be a at least 6 characters!</string>
+    <string name="msg_check_your_confirm_Password">Must be the same password!</string>
+    <string name="msg_error_inputs">You Have some errors in your inputs!</string>
+    <string name="msg_error_wrong_code">Wrong code!</string>
+
+    <!--  TEXTS  -->
+
+    <string name="Content_description_app_logo">App Logo</string>
+    <string name="Content_description_facebook_button">Facebook Login</string>
+    <string name="Content_description_google_button">Google Login</string>
+
+    <string name="msg_coming_soon">Coming soon :)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="montant_template"> %d €</string>
+    <string name="login">Log In</string>
+    <string name="email">e-mail</string>
+    <string name="e_mail">e-mail</string>
+    <string name="signup">sign up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="sign_in_anonymously">Sign-in Anonymously</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="or">OR</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
+    <string name="add_to_chart">Add to Cart</string>
+
+    <string name="features">Features</string>
+    <string name="cart">Cart</string>
+    <string name="empty_favorite_list">You don\'t have any favorite!</string>
+    <string name="dolar">$  </string>
+    <string name="cart_empty_list_message">You don\'t have any cart!</string>
+    <string name="purchase">Purchase</string>
+    <string name="wordTotal">Total</string>
+    <string name="category">Category</string>
+    <string name="product_not_found">Product not found!</string>
+    <string name="search_for_product">Search here… <font size="11" /></string>
+    <string name="no_internet_connection">There is no internet connection!</string>
+    <string name="discover">Discover</string>
+    // product string
+
+    <string name="account">Account</string>
+    <string name="explore">Explore</string>
+    <string name="categories">Categories</string>
+    <string name="best_selling">Best Selling</string>
+    <string name="see_all">See all</string>
+    <string name="new_tag">New</string>
+
+    <string name="price">$%1$s</string>
+    <string name="featured_brands">Featured Brands</string>
+    <string name="recommended">Recommended</string>
+    <string name="total">Total</string>
+    <string name="checkout">Checkout</string>
+    <string name="itemimagedescription">itemImageDescription</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="order_history">Order History</string>
+    <string name="track_order">Track Order</string>
+    <string name="cards">Cards</string>
+    <string name="notifications">Notifications</string>
+    <string name="logout">LogOut</string>
+    <string name="card_holder">Card Holder</string>
+    <string name="expiry">Expiry</string>
+    <string name="newButton">New</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="details">Details</string>
+    <string name="reviews">Reviews</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="tell_us_your_experience">Tell us your experience</string>
+    <string name="send">Send</string>
+    <string name="sign_in_to_continue">Sign in to Continue</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="no_reviews">No Reviews</string>
+    <string name="title_activity_product_details">ProductDetailsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+</resources>

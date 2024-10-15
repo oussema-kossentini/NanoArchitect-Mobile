@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorPrimary">#137CCF</color>
+    <color name="hintTextColor">#787878</color>
+    <color name="accent">#f52c56</color>
+    <color name="seatcolor">#1e87e3</color>
+    <color name="logocolor">#B0DAFF</color>
+
+
+
+    <color name="colorPrimaryDark">#D32F2F</color>
+
+
+    <color name="lightGray">#F9F9F9</color>
+    <color name="mediumGray">#D1D1D1</color>
+    <color name="lightMediumGray">#80D1D1D1</color>
+    <color name="darkGray">#4B4B4B</color>
+    <color name="dark">#313C44</color>
+    <color name="darker">#151B20</color>
+
+    <color name="red">#FF4646</color>
+    <color name="yellow">#FFC114</color>
+    <color name="green">#14AE5C</color>
+
+    <!-- LIGHT THEME -->
+    <color name="backgroundColor">@color/lightGray</color>
+    <color name="placeholderColor">@color/mediumGray</color>
+    <color name="itemColor">@color/darker</color>
+    // Custom Chip Style
+
+    <color name="checkedChipBackgroundColor">#FFCDD2</color>
+    <color name="chipBackgroundColor">@color/lightGray</color>
+    <color name="checkedChipTextColor">@color/colorPrimary</color>
+    <color name="chipTextColor">@color/darkGray</color>
+
+
+    <color name="strokeColor">@color/lightMediumGray</color>
+    <color name="cardBackgroundColor">@color/white</color>
+    <color name="cardBackgroundLightColor">#10F44336</color>
+    <color name="titleColor">@color/darker</color>
+    <color name="descriptionColor">@color/darkGray</color>
+
+
+    <color name="statusBarColor">@color/colorPrimaryDark</color>
+    <color name="contextualStatusBarColor">@color/darker</color>
+    <color name="contextualActionBarColor">@color/dark</color>
+    <color name="actionBarBackgroundColor">@color/colorPrimary</color>
+
+    // custom BottomNavigationView Style
+    <color name="bottomNavBackground">@color/white</color>
+    <color name="bottomNavItemColor">@color/darkGray</color>
+    <color name="bottomNavCheckedItemColor">@color/colorPrimary</color>
+    <color name="purple">#8692f7</color>
+    <!-- product colors  -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="light_black">#424242</color>
+    <color name="tranparent_white">#55ffffff</color>
+    <color name="orange">#ffa726</color>
+    <color name="navajo">#ffe0b2</color>
+    <color name="grey">#f1f8e9</color>
+    <color name="blue">#b3e5fc</color>
+    <color name="dark_orange">#ff8f00</color>
+    <color name="light_orange">#FFD580</color>
+    <color name="green_alternative">#64ba69</color>
+    //product colors
+
+
+
+    <color name="silver">#BEBEBE</color>
+    <color name="off_white">#DDDDDD</color>
+    <color name="dark_gray">#929292</color>
+    <color name="pink">#E80057</color>
+    <color name="whiteTrans">#10000000</color>
+    <color name="gray">#F0F0F0</color>
+    <color name="greenTrans">#EDFBF4</color>
+    <color name="card_color">#F89234</color>
+
+</resources>
