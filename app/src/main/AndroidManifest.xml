@@ -16,19 +16,19 @@
             android:name=".MainActivity7"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6"
+            android:name=".Profile"
             android:exported="true" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".ChangePassword"
             android:exported="true" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".ForgetPassword"
             android:exported="true" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".Login"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Register"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

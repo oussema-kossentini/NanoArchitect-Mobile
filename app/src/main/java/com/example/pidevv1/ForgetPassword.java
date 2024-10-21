@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity4 extends AppCompatActivity {
+public class ForgetPassword extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Démarrage de pagelogin
-                Intent intent = new Intent(MainActivity4.this, MainActivity3.class);
+                Intent intent = new Intent(ForgetPassword.this, Login.class);
                 startActivity(intent);
             }
         });

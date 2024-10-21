@@ -6,7 +6,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/purple"
-tools:context=".MainActivity6">
+tools:context=".Profile">
 <ImageView
     android:id="@+id/back"
     android:layout_width="33dp"
