@@ -12,7 +12,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -25,28 +24,41 @@ android {
             )
         }
     }
+
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+
+    packaging {
+        resources {
+            excludes += "META-INF/DEPENDENCIES"
+
+            excludes += "META-INF/versions/9/OSGI-INF/MANIFEST.MF"
+        }
+    }
+
 }
 
 dependencies {
-    implementation("androidx.room:room-runtime:2.6.1")
-implementation("androidx.room:room-compiler:2.6.1")
-    implementation(libs.security.crypto)
-    implementation ("com.auth0.android:jwtdecode:2.0.0")
-    implementation(libs.room.common)
-    implementation("com.auth0:java-jwt:4.2.1")
-implementation("org.mindrot:jbcrypt:0.4")
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
 
-            implementation(libs.appcompat)
+    implementation(libs.jwtdecode)
+    implementation(libs.java.jwt)
+    implementation(libs.bcrypt)
+
+    implementation(libs.security.crypto)
+    implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.identity.jvm)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }

@@ -41,6 +41,13 @@ public class User {
 
     @ColumnInfo(name = "Email")
     private String Email;
+    @ColumnInfo(name = "genre")
+    private String genre;
+    @ColumnInfo(name = "adresse")
+    private String adresse;
+    @ColumnInfo(name = "telephone")
+    private String telephone;
+
 
     public String getTokenForgetPassword()
     {return TokenForgetPassword;}
@@ -95,5 +102,29 @@ public class User {
 
     public void setEmail(String email) {
         this.Email = email;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }

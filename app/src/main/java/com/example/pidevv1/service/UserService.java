@@ -66,9 +66,34 @@ public class UserService {
         newUser.setPassword(hashedPassword);
 
         new Thread(() -> userDao.insetOne(newUser)).start();
+        String token = generateToken(newUser.getUid());
+
+        // Stocker le token dans les SharedPreferences
+        SharedPreferences.Editor editor = mPreferences.edit();
+        editor.putString("jwt_token", token);
+        editor.apply();
+        getUserInfo(email);
         return true;
     }
+    public void getUserInfo(String email) {
+        List<User> users = userDao.getUserByEmail(email);
+        if (users != null && users.size() == 1) {
+            User user = users.get(0);
 
+            // Stocker les informations utilisateur dans les SharedPreferences
+            SharedPreferences.Editor editor = mPreferences.edit();
+            editor.putString("user_id", String.valueOf(user.getUid()));
+            editor.putString("user_first_name", user.getFirstName());
+            editor.putString("user_last_name", user.getLastName());
+            editor.putString("user_email", user.getEmail());
+            editor.putString("user_genre", user.getGenre());
+            editor.putString("user_adresse", user.getAdresse());
+            editor.putString("user_telephone", user.getTelephone());
+            editor.apply();
+        } else {
+            Log.e("UserService", "User not found");
+        }
+    }
     // Méthode pour la connexion
     public boolean seConnecter(String email, String password) {
         List<User> users = userDao.getUserByEmail(email);
@@ -83,7 +108,7 @@ public class UserService {
                 SharedPreferences.Editor editor = mPreferences.edit();
                 editor.putString("jwt_token", token);
                 editor.apply();
-
+                getUserInfo(email);
                 return true;  // Connexion réussie
             }
         }

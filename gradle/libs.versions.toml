@@ -7,7 +7,11 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
-roomCommon = "2.6.1"
+room = "2.5.0"
+jwtdecode = "2.0.0"
+javajwt = "4.2.1"
+bcrypt = "0.4"
+
 identityJvm = "202408.1"
 
 [libraries]
@@ -18,10 +22,13 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-# Room dependencies
-
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+jwtdecode = { group = "com.auth0.android", name = "jwtdecode", version.ref = "jwtdecode" }
+java-jwt = { group = "com.auth0", name = "java-jwt", version.ref = "javajwt" }
+bcrypt = { group = "org.mindrot", name = "jbcrypt", version.ref = "bcrypt" }
 security-crypto = { group = "androidx.security", name = "security-crypto", version = "1.1.0-alpha03" }
-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+
 identity-jvm = { group = "com.android.identity", name = "identity-jvm", version.ref = "identityJvm" }
 
 [plugins]

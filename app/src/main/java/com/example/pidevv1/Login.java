@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
-import androidx.security.crypto.MasterKeys;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import androidx.activity.EdgeToEdge;
@@ -61,7 +60,6 @@ public class Login extends AppCompatActivity {
                     EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM  // Schéma pour les valeurs
             );
 
-            // Utilisation de SharedPreferences comme d'habitude
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("login", "user123");
             editor.apply();
@@ -107,22 +105,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-      /*  loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Sauvegarder les informations de connexion
-                SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-                preferencesEditor.putString("login", mLogin.getText().toString());
-                preferencesEditor.putString("password", mPassword.getText().toString());
-                preferencesEditor.apply();
 
-                // Rediriger vers l'activité principale après la connexion
-                Intent intent = new Intent(Login.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-*/
 
         // ki  tenzel  ala mot de pass oublier
         TextView forgetPassword = findViewById(R.id.forgetpassword);
