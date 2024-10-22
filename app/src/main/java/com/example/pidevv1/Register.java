@@ -2,6 +2,7 @@ package com.example.pidevv1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,7 +44,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.register);
-
+      //  Log.d("tester si le mail est la ", "mail dans le shares prefrence dans profil  : " + email);
         // Initialiser les champs EditText et RadioGroup pour récupérer les informations de l'utilisateur
         firstNameEditText = findViewById(R.id.tiNom);         // Assurez-vous que l'ID correspond à celui dans le fichier XML
         lastNameEditText = findViewById(R.id.tiPrenom);
@@ -73,36 +74,33 @@ public class Register extends AppCompatActivity {
 
         // Gestion du bouton d'inscription
         Button registerButton = findViewById(R.id.registerButton);
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Récupérer les données saisies par l'utilisateur
-                String firstName = firstNameEditText.getText().toString().trim();
-                String lastName = lastNameEditText.getText().toString().trim();
-                String email = emailEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString();
-                String confirmPassword = confirmPasswordEditText.getText().toString();
+        registerButton.setOnClickListener(v -> {
+            // Récupérer les données saisies par l'utilisateur
+            String firstName = firstNameEditText.getText().toString().trim();
+            String lastName = lastNameEditText.getText().toString().trim();
+            String email = emailEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString();
+            String confirmPassword = confirmPasswordEditText.getText().toString();
 
-                // Vérifier que les mots de passe correspondent
-                if (!password.equals(confirmPassword)) {
-                    confirmPasswordEditText.setError("Les mots de passe ne correspondent pas");
-                    return;
-                }
-
-                // Vérifier si un genre a été sélectionné
-                int selectedGenderId = genderRadioGroup.getCheckedRadioButtonId();
-                if (selectedGenderId == -1) {
-                    // Aucun genre n'a été sélectionné
-                    return;
-                }
-
-                // Récupérer le genre sélectionné (Homme ou Femme)
-                selectedGenderRadioButton = findViewById(selectedGenderId);
-                String gender = selectedGenderRadioButton.getText().toString();
-
-                // Appeler la méthode d'enregistrement
-                registerUserAndNavigateToProfile(firstName, lastName, email, password, gender);
+            // Vérifier que les mots de passe correspondent
+            if (!password.equals(confirmPassword)) {
+                confirmPasswordEditText.setError("Les mots de passe ne correspondent pas");
+                return;
             }
+            Log.d("RegisterActivity", "Bouton S'inscrire cliqué");
+            // Vérifier si un genre a été sélectionné
+            int selectedGenderId = genderRadioGroup.getCheckedRadioButtonId();
+            if (selectedGenderId == -1) {
+                // Aucun genre n'a été sélectionné
+                return;
+            }
+
+            // Récupérer le genre sélectionné (Homme ou Femme)
+            selectedGenderRadioButton = findViewById(selectedGenderId);
+            String gender = selectedGenderRadioButton.getText().toString();
+
+            // Appeler la méthode d'enregistrement
+            registerUserAndNavigateToProfile(firstName, lastName, email, password, gender);
         });
     }
 

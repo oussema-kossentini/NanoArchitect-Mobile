@@ -66,6 +66,7 @@ public class UserService {
         newUser.setPassword(hashedPassword);
 
         new Thread(() -> userDao.insetOne(newUser)).start();
+        Log.d("UserService", "Utilisateur enregistré : " + email);
         String token = generateToken(newUser.getUid());
 
         // Stocker le token dans les SharedPreferences
@@ -79,17 +80,21 @@ public class UserService {
         List<User> users = userDao.getUserByEmail(email);
         if (users != null && users.size() == 1) {
             User user = users.get(0);
-
+            Log.d("UserService", "Utilisateur trouvé : " + user.getEmail());
             // Stocker les informations utilisateur dans les SharedPreferences
             SharedPreferences.Editor editor = mPreferences.edit();
             editor.putString("user_id", String.valueOf(user.getUid()));
             editor.putString("user_first_name", user.getFirstName());
             editor.putString("user_last_name", user.getLastName());
             editor.putString("user_email", user.getEmail());
+
+            Log.d("UserService", "le email est  : " + email);
             editor.putString("user_genre", user.getGenre());
             editor.putString("user_adresse", user.getAdresse());
             editor.putString("user_telephone", user.getTelephone());
             editor.apply();
+            String x = mPreferences.getString("user_email", "");  // Par défaut, "" si aucune valeur n'est trouvée
+            Log.d("UserService", "Le email dans le stockage local est : " + x);
         } else {
             Log.e("UserService", "User not found");
         }
