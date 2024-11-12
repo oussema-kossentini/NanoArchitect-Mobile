@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#FFF5F5F5"
+    tools:context=".MainActivity.ForgetPassword">
+
+
+
+
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/tiEmailForget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:backgroundTint="#226DA8" />
+
+    <!-- Code Input -->
+    <EditText
+        android:id="@+id/tithecod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the code"
+        android:inputType="number"
+        android:padding="10dp"
+        android:backgroundTint="#226DA8"
+        android:layout_marginTop="12dp" />
+
+    <!-- Send Button -->
+    <Button
+        android:id="@+id/forgetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Code"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#226DA8"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/df"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Code"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#226DA8"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+    <!-- Resend Button -->
+    <Button
+        android:id="@+id/resendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend Code"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#226DA8"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+</LinearLayout>

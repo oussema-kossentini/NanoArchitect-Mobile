@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34
+
+    // Définir le namespace de l'application
+    namespace 'com.example.pidev'
+
+    defaultConfig {
+        applicationId 'com.example.pidev'
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Bibliothèques principales
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.5.0'
+
+    // Room Database
+    implementation "androidx.room:room-runtime:2.6.0"
+    annotationProcessor "androidx.room:room-compiler:2.6.0"
+    // Si vous utilisez Kotlin, utilisez cette ligne au lieu de annotationProcessor :
+    // kapt "androidx.room:room-compiler:2.6.0"
+
+    // Apache Commons Email
+    implementation 'com.sun.mail:android-mail:1.6.7'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+
+
+    // Java Mail API (pour l'activation Android et la gestion des emails)
+    //implementation "com.sun.mail:android-mail:1.6.7"
+    //implementation "com.sun.mail:android-activation:1.6.7"
+
+    // JWT Decoding et Sécurité
+    implementation 'com.auth0.android:jwtdecode:2.0.1' // Pour le décodage JWT
+    implementation 'org.mindrot:jbcrypt:0.4'           // Pour le hachage bcrypt
+    implementation 'com.auth0:java-jwt:4.2.1'
+
+    // Country Code Picker Library
+    implementation 'com.hbb20:ccp:2.5.4'
+
+    // Support AndroidX et cycle de vie
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-ktx:1.5.1'
+
+    // Sécurité
+    implementation 'androidx.security:security-crypto:1.1.0-alpha03'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pidev">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/contracts"
+        android:label="Gestion Des Contrats"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Main Activity -->
+        <activity
+            android:name="com.example.pidev.MainActivity.MainActivity"
+            android:exported="true"
+            android:label="Gestion Des Contrats">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity
+            android:name="com.example.pidev.MainActivity.UpdateActivity"
+            android:exported="true"
+            android:parentActivityName="com.example.pidev.MainActivity.MainActivity" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.AddActivity"
+            android:exported="true"
+            android:label="Ajouter un contrat"
+            android:parentActivityName="com.example.pidev.MainActivity.MainActivity" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.ChangePassword"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.example.pidev.MainActivity.ForgetPassword"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.Login"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.MainActivity7"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.Profile"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.Register"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.UserList"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.pidev.MainActivity.home"
+            android:exported="true" />
+
+
+    </application>
+</manifest>
