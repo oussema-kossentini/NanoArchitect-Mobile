@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.java.akrem.contrat">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/contracts"
+        android:label="Gestion Des Contrats"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".home"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddActivity"
+            android:label="Ajouter un contrat"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Gestion Des Contrats">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

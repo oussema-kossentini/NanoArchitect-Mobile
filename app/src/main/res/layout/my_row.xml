@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Contract ID Circle -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCircleCard"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:cardBackgroundColor="#2196F3"
+                app:cardCornerRadius="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/contrat_id_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- CIN with Label -->
+            <TextView
+                android:id="@+id/cin_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="CIN"
+                android:textColor="#78909C"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/idCircleCard"
+                app:layout_constraintTop_toTopOf="@+id/idCircleCard" />
+
+            <TextView
+                android:id="@+id/contrat_cin_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="123456789"
+                android:textColor="#263238"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/idCircleCard"
+                app:layout_constraintTop_toBottomOf="@+id/cin_label" />
+
+            <!-- Type with Label and Icon -->
+            <TextView
+                android:id="@+id/type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Type de contrat :"
+                android:textColor="#78909C"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/idCircleCard"
+                app:layout_constraintTop_toBottomOf="@+id/idCircleCard" />
+
+            <ImageView
+                android:id="@+id/type_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                app:layout_constraintStart_toStartOf="@+id/type_label"
+                app:layout_constraintTop_toBottomOf="@+id/type_label"
+                app:tint="#2196F3" />
+
+            <TextView
+                android:id="@+id/type_prefix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Type de contrat :"
+                android:textColor="#78909C"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/type_icon"
+                app:layout_constraintStart_toEndOf="@+id/type_icon"
+                app:layout_constraintTop_toTopOf="@+id/type_icon" />
+
+            <TextView
+                android:id="@+id/contrat_type_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Type"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/type_prefix"
+                app:layout_constraintStart_toEndOf="@+id/type_prefix"
+                app:layout_constraintTop_toTopOf="@+id/type_prefix" />
+
+            <!-- Contract Number -->
+            <TextView
+                android:id="@+id/num_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Numéro de contrat"
+                android:textColor="#78909C"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/type_icon"
+                app:layout_constraintTop_toBottomOf="@+id/type_icon" />
+
+            <TextView
+                android:id="@+id/contrat_num_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12345"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/num_label"
+                app:layout_constraintTop_toBottomOf="@+id/num_label" />
+
+            <!-- Dates Container -->
+            <LinearLayout
+                android:id="@+id/dates_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#F5F5F5"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:radius="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/contrat_num_txt">
+
+                <!-- Start Date -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date de début"
+                        android:textColor="#78909C"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/contrat_datestart_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01/01/2024"
+                        android:textColor="#263238"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- End Date -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date de fin"
+                        android:textColor="#78909C"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/contrat_dateend_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31/12/2024"
+                        android:textColor="#263238"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Value -->
+            <TextView
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Valeur du contrat"
+                android:textColor="#78909C"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dates_container" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@+id/value_label"
+                app:layout_constraintTop_toBottomOf="@+id/value_label">
+
+                <TextView
+                    android:id="@+id/contrat_valeur_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10,000"
+                    android:textColor="#2196F3"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currency_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="TND"
+                    android:textColor="#2196F3"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
