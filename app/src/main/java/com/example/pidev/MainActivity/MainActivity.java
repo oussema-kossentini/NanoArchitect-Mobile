@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             return; // Sortie anticipée de onCreate car l'utilisateur est redirigé
         }
         setContentView(R.layout.activity_main);
-
+//
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.add_button);
         empty_imageview = findViewById(R.id.empty_imageview);
