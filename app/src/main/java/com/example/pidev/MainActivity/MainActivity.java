@@ -5,6 +5,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKey;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,11 +24,13 @@ import com.example.pidev.entity.Contrat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.example.pidev.R;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    private SharedPreferences mPreferences;
     RecyclerView recyclerView;
     FloatingActionButton add_button;
     ImageView empty_imageview;
@@ -38,17 +42,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            // Création de la clé maître (MasterKey) en utilisant MasterKey.Builder
+            MasterKey masterKey = new MasterKey.Builder(this)
+                    .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                    .build();
 
-        // Check if user is logged in
-        SharedPreferences sharedPreferences = getSharedPreferences("com.example.pidevv1", MODE_PRIVATE);
-        if (sharedPreferences.getString("login", null) == null) {
-            // If no login information found, redirect to Login activity
-            Intent intent = new Intent(MainActivity.this, Login.class);
-            startActivity(intent);
-            finish(); // Close the MainActivity so it doesn't remain in the back stack
-            return; // Exit onCreate early since the user is redirected
+            // Initialisation de EncryptedSharedPreferences
+            SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(
+                    this,// Le contexte
+                    "secret_shared_prefs",  // Nom du fichier SharedPreferences
+                    masterKey,               // L'objet MasterKey
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,   // Schéma pour les clés
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM  // Schéma pour les valeurs
+            );
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("login", "user123");
+            editor.apply();
+            mPreferences = sharedPreferences;
+        } catch (GeneralSecurityException | IOException e) {
+            e.printStackTrace();
         }
 
+        // Check if user is logged in
+     //   SharedPreferences sharedPreferences = getSharedPreferences("com.example.pidevv1", MODE_PRIVATE);
+        // Vérification de la présence du jeton JWT dans EncryptedSharedPreferences
+        String jwtToken = mPreferences.getString("jwt_token", null);
+        if (jwtToken == null) {
+            // Si aucun jeton n'est trouvé, rediriger vers l'activité Login
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
+            finish(); // Fermer MainActivity pour éviter qu'elle reste dans la pile
+            return; // Sortie anticipée de onCreate car l'utilisateur est redirigé
+        }
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
