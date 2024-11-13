@@ -44,7 +44,7 @@
         <activity
             android:name="com.example.pidev.MainActivity.Login"
             android:exported="true" />
-//
+
         <activity
             android:name="com.example.pidev.MainActivity.MainActivity"
             android:exported="true" />

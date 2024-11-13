@@ -12,6 +12,8 @@ public class User {
 
     @ColumnInfo(name = "first_name")
     private String firstName;
+    @ColumnInfo(name = "Role")
+    private String Role;
 
     @ColumnInfo(name = "last_name")
     private String lastName;
@@ -59,6 +61,14 @@ public class User {
 
     public void setResetTokenExpiration(long resetTokenExpiration) {
         this.resetTokenExpiration = resetTokenExpiration;
+    }
+
+    public String getRole() {
+        return Role;
+    }
+
+    public void setRole(String uid) {
+        this.Role = Role;
     }
 
 

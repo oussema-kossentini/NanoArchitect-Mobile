@@ -91,6 +91,7 @@ public class UserService {
         newUser.setLastName(lastName);
         newUser.setEmail(email);
         newUser.setPassword(hashedPassword);
+        newUser.setRole("user");
 newUser.setGenre(gender);
 newUser.setAdresse(adress);
 newUser.setTelephone(phone);
@@ -116,7 +117,7 @@ newUser.setTelephone(phone);
             editor.putString("user_first_name", user.getFirstName());
             editor.putString("user_last_name", user.getLastName());
             editor.putString("user_email", user.getEmail());
-
+            editor.putString("user_role", user.getRole());
             Log.d("UserService", "le email est  : " + email);
             editor.putString("user_genre", user.getGenre());
             editor.putString("user_adresse", user.getAdresse());

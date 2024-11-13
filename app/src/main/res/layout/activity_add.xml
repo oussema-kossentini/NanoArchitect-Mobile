@@ -65,7 +65,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Date de début"
-        android:inputType="date"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Date de fin"
-        android:inputType="date"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

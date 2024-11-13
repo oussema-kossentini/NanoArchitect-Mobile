@@ -18,7 +18,7 @@ import com.example.pidev.entity.User;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {User.class, Contrat.class, PostModel.class}, version = 2, exportSchema = true)
+@Database(entities = {User.class, Contrat.class, PostModel.class}, version = 3, exportSchema = true)
 public abstract class AppDataBase extends RoomDatabase {
 
     private static AppDataBase instance;
@@ -29,6 +29,17 @@ public abstract class AppDataBase extends RoomDatabase {
     public static final int NUMBER_OF_THREADS = Runtime.getRuntime().availableProcessors();
     public static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+
+
+    static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+
+            database.execSQL("ALTER TABLE user_table ADD COLUMN Role TEXT NOT NULL DEFAULT 'user'");
+
+        }
+    };
+
     static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
@@ -52,7 +63,8 @@ public abstract class AppDataBase extends RoomDatabase {
                     instance = Room.databaseBuilder(context.getApplicationContext(),
                                     AppDataBase.class, "room_test_db")
                             .allowMainThreadQueries()
-                            .addMigrations(MIGRATION_1_2)
+                           // .addMigrations(MIGRATION_1_2,MIGRATION_2_3)
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
