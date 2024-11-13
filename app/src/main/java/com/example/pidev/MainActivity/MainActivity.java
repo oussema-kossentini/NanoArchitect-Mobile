@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try {
+   /*     try {
             // Création de la clé maître (MasterKey) en utilisant MasterKey.Builder
             MasterKey masterKey = new MasterKey.Builder(this)
                     .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             finish(); // Fermer MainActivity pour éviter qu'elle reste dans la pile
             return; // Sortie anticipée de onCreate car l'utilisateur est redirigé
         }
+        else{Intent intent = new Intent(MainActivity.this, home.class);
+            startActivity(intent);}*/
         setContentView(R.layout.activity_main);
 //
         recyclerView = findViewById(R.id.recyclerView);

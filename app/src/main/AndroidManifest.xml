@@ -11,9 +11,9 @@
 
         <!-- Main Activity -->
         <activity
-            android:name="com.example.pidev.MainActivity.MainActivity"
+            android:name="com.example.pidev.MainActivity.home"
             android:exported="true"
-            android:label="Gestion Des Contrats">
+            android:label="location voiture ">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -46,7 +46,7 @@
             android:exported="true" />
 //
         <activity
-            android:name="com.example.pidev.MainActivity.MainActivity7"
+            android:name="com.example.pidev.MainActivity.MainActivity"
             android:exported="true" />
 
         <activity
@@ -61,10 +61,17 @@
             android:name="com.example.pidev.MainActivity.UserList"
             android:exported="true" />
 
+
+
         <activity
-            android:name="com.example.pidev.MainActivity.home"
+            android:name="com.example.pidev.MainActivity.ShowPostActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.pidev.MainActivity.MainActivityRihab"
             android:exported="true" />
 
-
+        <activity
+            android:name="com.example.pidev.MainActivity.AddUpdatePostActivity"
+            android:exported="true" />
     </application>
 </manifest>

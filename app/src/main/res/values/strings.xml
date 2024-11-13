@@ -3,6 +3,13 @@
 
 
 
+    <string name="title_activity_add_post">Ajouter un blog</string>
+    <string name="title_activity_show_post">Lire le blog</string>
+
+
+
+    <string name="dummy_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius molestie justo, sit amet commodo magna convallis vel. Praesent semper lacus in sapien sodales, at commodo lectus eleifend. Maecenas risus ipsum, hendrerit id condimentum eget, luctus id arcu. Maecenas vitae leo eu arcu hendrerit blandit nec at ante. Donec congue sit amet ligula non consequat. Quisque tempus tellus lacus, in accumsan metus tincidunt in. Morbi pretium nunc non condimentum tincidunt. Morbi gravida condimentum felis, nec mollis nisi eleifend ac. Donec pharetra vulputate mi, interdum auctor dolor sodales in. Praesent turpis ante, dictum sit amet lacinia non, ullamcorper eu nisl.</string>
+
 
         <string name="navigation_drawer_open">Open navigation drawer</string>
         <string name="navigation_drawer_close">Close navigation drawer</string>
